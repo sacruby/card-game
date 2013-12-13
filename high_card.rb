@@ -21,7 +21,7 @@ player_count = player_count.to_i
 if player_count > 0 and player_count < (SIZE_OF_DECK / HAND_SIZE)
   # Load up some players
   players = []
-  
+
   (0...player_count).each do |index|
     print "Enter name for player ##{index + 1}: "
     name = gets
@@ -34,7 +34,7 @@ if player_count > 0 and player_count < (SIZE_OF_DECK / HAND_SIZE)
 
   # Let's see the setup game
   game_engine.show
-  
+
   # Let's play and see who wins
   game_engine.play
 
