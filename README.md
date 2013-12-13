@@ -17,3 +17,8 @@ Shuffle the deck, deal each player one card, and then compare the cards. The pla
 
 * Add support for player's to have more than one card
 
+## NOTE
+
+The master branch contains the project "starter files". If you want to
+jump to the end, check out the  "final-files" branch.
+
