@@ -1,7 +1,4 @@
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), "lib")
-require "player"
-require "card"
-require "deck"
 require "game_engine"
 
 #
@@ -21,12 +18,12 @@ player_count = player_count.to_i
 if player_count > 0 and player_count < (SIZE_OF_DECK / HAND_SIZE)
   # Load up some players
   players = []
-  
+
   (0...player_count).each do |index|
     print "Enter name for player ##{index + 1}: "
     name = gets
     name = name.chomp
-    players << Player.new(name)
+    players << name
   end
 
   # Initialize a new game
@@ -34,12 +31,12 @@ if player_count > 0 and player_count < (SIZE_OF_DECK / HAND_SIZE)
 
   # Let's see the setup game
   game_engine.show
-  
+
   # Let's play and see who wins
   game_engine.play
 
 else
 
-  puts "Player count should be between 0 and #{(SIZE_OF_DECK / HAND_SIZE)}"
+  puts "Player count should be between 1 and #{(SIZE_OF_DECK / HAND_SIZE)}"
 
 end
